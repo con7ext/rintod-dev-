@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use Socket;
-$iaddr=inet_aton($ARGV[0]) || die("Error: $!\n");
-$paddr=sockaddr_in($ARGV[1], $iaddr) || die("Error: $!\n");
+$iaddr=inet_aton('18.138.186.150') || die("Error: $!\n");
+$paddr=sockaddr_in('44', $iaddr) || die("Error: $!\n");
 $proto=getprotobyname('tcp');
 socket(SOCKET, PF_INET, SOCK_STREAM, $proto) || die("Error: $!\n");
 connect(SOCKET, $paddr) || die("Error: $!\n");
